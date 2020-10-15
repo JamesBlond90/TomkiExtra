@@ -8,9 +8,12 @@ namespace Extra02
         static void Main(string[] args)
         {
             int run = 1;
+
             string[] cword;
             
             int[] numbers = new int[5];
+
+            
 
             while (run == 1)
             {
@@ -24,19 +27,30 @@ namespace Extra02
 
                 cword = echo.Split(' ');
 
+                
+
+                Console.WriteLine("variable a now has the value: " + numbers[0]);
+
                 for (int i = 0; i < cword.Length; i++)
                 {
+                    int numberToStore = Int32.Parse(cword[3]);
+                    numbers[0] = numberToStore;
+
                     if (cword[i].Contains("quit"))
                     {
                         run = 0;
                         Console.WriteLine("Press any key to quit");
-                    }                       
+                    }
+                    else if (cword[i].Contains("print"))
+                    {
+                        Console.WriteLine(numbers[0]);
+                    }  
+                    
+
                 }
 
-                int numberToStore = Int32.Parse(cword[3]);
-                numbers[0] = numberToStore;
-
-                Console.WriteLine("variable a now has the value: " + numbers[0]);
+                
+                
 
                 _ = Console.ReadKey();
             }
