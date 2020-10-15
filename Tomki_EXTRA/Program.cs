@@ -8,6 +8,7 @@ namespace Extra02
         static void Main(string[] args)
         {
             int run = 1;
+            string[] cword;
 
             while (run == 1)
             {
@@ -18,16 +19,25 @@ namespace Extra02
 
                 Console.Clear();
 
-                if (echo == "quit")
-                {
-                    run = 0;
+                
 
-                    Console.WriteLine("Press any key to quit");
+                cword = echo.Split(' ');
+
+
+                for (int i = 0; i < cword.Length; i++)
+                {
+                    
+
+                    if (cword[i].Contains("quit"))
+                    {
+                        run = 0;
+                        Console.WriteLine("Press any key to quit");
+
+                    }
+                    else
+                        Console.WriteLine(cword[i]);
                 }
 
-                Console.WriteLine(echo);
-
-               
 
                 _ = Console.ReadKey();
 
