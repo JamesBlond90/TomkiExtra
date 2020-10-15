@@ -21,18 +21,18 @@ namespace Extra02
                 if (echo == "quit")
                 {
                     run = 0;
+
+                    Console.WriteLine("Press any key to quit");
                 }
 
                 Console.WriteLine(echo);
 
+               
 
-                Console.WriteLine("Press any key to quit");
+                _ = Console.ReadKey();
 
-                Console.ReadKey();
+
             }
-
-
-
 
         }
     }
